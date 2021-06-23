@@ -1,0 +1,41 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  text-align:center; background:#f6f8f8; padding:20rpx;font-size:16px;
+} 
+.padb{padding-bottom: 15rpx;}
+.weui-grid > image{
+  width: 50rpx;
+  height: 50rpx
+}
+.weui-grids{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.weui-flex{
+  display: flex;
+  justify-content: space-between;
+  padding: 35rpx;
+}
+.weui-grid{
+  width: 240rpx;
+  height: 240rpx;
+}
+
+.swiper-conent{
+  padding: 20rpx;
+  margin-top: 20rpx;
+  background: white;
+  border-radius: 20rpx;
+}
+.swiper{
+  margin: 10rpx;
+}
+.swiper-item{
+  border-radius: 10rpx;
+  color: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}

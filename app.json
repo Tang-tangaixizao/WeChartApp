@@ -1,0 +1,42 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/dont/dont",
+    "pages/mine/mine"
+  ],
+  "permission":{
+    "scope.userLocation":{
+      "desc":"你的位置将用于小程序使用"
+    }
+  },
+  "window":{
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "校园汇",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh":true,
+    "backgroundTextStyle":"dark"
+  },
+  "tabBar": {
+    "selectedColor": "#16a085",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/home.png",
+        "selectedIconPath": "/images/home-active.png"
+      },{
+        "pagePath": "pages/dont/dont",
+        "text": "地图",
+        "iconPath": "/images/addr.png",
+        "selectedIconPath": "/images/addr-active.png"
+      },{
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/images/me.png",
+        "selectedIconPath": "/images/me-active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

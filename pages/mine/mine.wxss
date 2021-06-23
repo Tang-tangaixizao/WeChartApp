@@ -1,0 +1,81 @@
+/* pages/mine/mine.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  background: rgb(230,230,230);
+}
+.mine-body-top{
+  height: 500rpx;
+  background: url("https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=311933934,2978368709&fm=26&gp=0.jpg") no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+.mine-body{
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.mine-body-top{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.user-text{
+  text-align: center;
+  margin-top: 10rpx;
+  color: white;
+}
+.mine-top-user-image{
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.mine-body-top{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-item {
+  background: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 80rpx;
+  margin-top: 1rpx;
+  justify-content: space-between;
+  position: relative; /*父元素位置要设置为相对*/
+ }
+ 
+ .item-image {
+  width: 50rpx;
+  height: 50rpx;
+  margin: 20rpx;
+ }
+ 
+ .item-text-1 {
+  color: gray;
+  font-size: 25rpx;
+  margin-left: 20rpx;
+ }
+ .item-text{
+  font-size: 30rpx;
+  margin-left: 20rpx;
+ }
+ .item-text-content{
+   font-size: 30rpx;
+   margin-right: 20rpx;
+  text-align: right;
+  color: gray;
+ }
+ .line {
+  width: 100%;
+  height: 1rpx;
+  background: rgb(230,230,230);
+ }
+.system-list-item{
+  margin-top: 20rpx;
+}

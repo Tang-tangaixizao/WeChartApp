@@ -1,0 +1,41 @@
+<!--pages/mine/mine.wxml-->
+<view class="mine-body">
+    <view class="mine-body-top">
+      <view class="mine-top-user-image">
+        <open-data type="userAvatarUrl" class="img" ></open-data>
+      </view>
+        <open-data type="userNickName" class="user-text"></open-data>
+    </view>
+
+    <view>
+      <view class="list-item">
+        <text class="item-text-1">设备信息</text>
+      </view>
+
+      <view class="line"></view>
+      <view class="list-item">
+        <text class="item-text">型号</text>
+        <text class="item-text-content">{{xingnum}}</text>
+      </view>
+      <view class="line"></view>
+
+      <view class="list-item">
+        <text class="item-text">版本</text>
+        <text class="item-text-content">{{systemnum}}</text>
+      </view>
+      <view class="line"></view>
+
+      <view class="list-item">
+        <text class="item-text">分辨率</text>
+        <text class="item-text-content item-text-content-1">{{fengbianlu}}</text>
+      </view>
+      <view class="line"></view>
+
+      <view class="list-item system-list-item">
+        <text class="item-text">系统设置</text>
+        <text class="item-text-content item-text-content-1">></text>
+      </view>
+      <view class="line"></view>
+    </view>
+</view>
+

@@ -1,0 +1,98 @@
+<!--pages/index/index.wxml-->
+<view class='container'>
+  <view style="border-radius:10px; background:#fff;display:block; width:100%;">
+    <view style="padding:10px;">
+      <image mode="widthFix" src="/img/icon1.png" style="width:50rpx;height:50rpx;vertical-align: middle;" /> {{weatherweek.city}}</view>
+    <view style="padding:20px 0;">
+      <view style="font-size:48px;">{{weatherweek.tem}}℃</view>
+      <view style="font-size:18px;">{{weatherweek.wea}}</view>
+    </view>
+  </view>
+<!--2-->
+  <view style="margin-top:10px; padding:10px 0; border-radius:10px; background:#fff;display:block; width:100%;">
+    <view wx:for="{{weatherweek.hours}}" wx:key="key">
+      <view class="weui-flex" style="padding-bottom:10px;">
+        <view class="weui-flex__item">{{item.hours}}</view>
+        <view class="weui-flex__item">{{item.win}}</view>
+        <view class="weui-flex__item">{{item.week}}</view>
+        <view class="weui-flex__item">{{item.wea}}</view>
+        <view class="weui-flex__item">{{item.tem}}℃</view>
+      </view>
+    </view>
+  </view>
+<!--./2-->
+<view class="swiper-conent">
+  <text>24小时逐三小时预报</text>
+  <swiper class="swiper" autoplay="true" circular="true"  easing-function="easeInOutCubic">
+      <swiper-item class="swiper-item">
+        <text>温度:{{weatherweek.hours[0].tem}}</text>
+        <text>天气:{{weatherweek.hours[0].wea}}</text>
+        <text>风向:{{weatherweek.hours[0].win}}</text>
+        <text>风力:{{weatherweek.hours[0].win_speed}}</text>
+      </swiper-item>
+      
+      <swiper-item class="swiper-item">
+        <text>温度:{{weatherweek.hours[1].tem}}</text>
+        <text>天气:{{weatherweek.hours[1].wea}}</text>
+        <text>风向:{{weatherweek.hours[1].win}}</text>
+        <text>风力:{{weatherweek.hours[1].win_speed}}</text>
+      </swiper-item>
+
+      <swiper-item class="swiper-item">
+        <text>温度:{{weatherweek.hours[2].tem}}</text>
+        <text>天气:{{weatherweek.hours[2].wea}}</text>
+        <text>风向:{{weatherweek.hours[2].win}}</text>
+        <text>风力:{{weatherweek.hours[2].win_speed}}</text>
+      </swiper-item>
+
+      <swiper-item class="swiper-item">
+        <text>温度:{{weatherweek.hours[3].tem}}</text>
+        <text>天气:{{weatherweek.hours[3].wea}}</text>
+        <text>风向:{{weatherweek.hours[3].win}}</text>
+        <text>风力:{{weatherweek.hours[3].win_speed}}</text>
+      </swiper-item>
+  </swiper>
+</view>
+<!--3-->
+  <view style="margin-top:10px; border-radius:10px; background:#fff;display:block; width:100%;">
+      <view style="font-size:16px; padding:10px 0;font-weight:bold;">生活指数</view>
+      <view class="weui-grids">
+                <view class="weui-grid">
+                    <image class="weui-grid__icon" src="/img/icon8.png" />
+                    <view class="weui-grid__label">紫外线指数</view>
+                    <view class="weui-grid__label">{{weatherweek.zhishu.ziwaixian.level}}</view>
+                </view>
+                <view class="weui-grid">
+                    <image class="weui-grid__icon" src="/img/icon2.png" />
+                    <view class="weui-grid__label">减肥指数</view>
+                    <view class="weui-grid__label">{{weatherweek.aqi.yundong}}</view>
+                </view>
+                <view class="weui-grid">
+                    <image class="weui-grid__icon" src="/img/icon6.png" />
+                    <view class="weui-grid__label">净化指数</view>
+                    <view class="weui-grid__label">{{weatherweek.aqi.jinghuaqi}}</view>
+                </view>
+                <view class="weui-grid">
+                    <image class="weui-grid__icon" src="/img/icon7.png" />
+                    <view class="weui-grid__label">穿衣指数</view>
+                    <view class="weui-grid__label">{{weatherweek.zhishu.chuanyi.level}}</view>
+                </view>
+                <view class="weui-grid">
+                    <image class="weui-grid__icon" src="/img/icon4.png" />
+                    <view class="weui-grid__label">洗车指数</view>
+                    <view class="weui-grid__label">{{weatherweek.zhishu.xiche.level}}</view>
+                </view>
+                <view class="weui-grid">
+                    <image class="weui-grid__icon" src="/img/icon3.png" />
+                    <view class="weui-grid__label">空气指数</view>
+                    <view class="weui-grid__label">{{weatherweek.aqi.air_level}}</view>
+                </view>
+        </view>
+  </view>
+<!--./3-->
+    <!--5-->
+  <view style="margin-top:10px; padding:10px 0; border-radius:10px; background:#fff;display:block; width:100%; text-align:left;">
+    <view style="padding:10px;">生活小建议:{{weatherweek.aqi.air_tips}}</view>
+  </view>
+<!--./5-->
+</view>
